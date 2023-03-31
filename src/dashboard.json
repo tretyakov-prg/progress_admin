@@ -1,0 +1,107 @@
+{
+    "ccard" : [
+        {
+            "name": "Monthly Sales",
+            "icon": "icon-arrow-up text-c-green",
+            "cash": "$ 2.942.32",
+            "procent": "36%",
+            "pdata": "36%"
+        },
+        {
+            "name": "Daily Sales",
+            "icon": "icon-arrow-down text-c-red",
+            "cash": "$ 249.95",
+            "procent": "67%",
+            "pdata": "67%"
+        },
+        {
+            "name": "Yearly Sales",
+            "icon": "icon-arrow-up text-c-green",
+            "cash": "$ 8.638.32",
+            "procent": "80%",
+            "pdata": "80%"
+        }
+        ],
+    "rcusers" : [
+            {
+                "avatar": "assets/images/user/avatar-1.jpg",
+                "name": "Isabella Christensen",
+                "desc": "Lorem Ipsum is simply…",
+                "blink": "text-c-green",
+                "data": "11 MAY 12:56",
+                "r_href": "#!",
+                "a_href": "#!"
+            },
+            {
+                "avatar": "assets/images/user/avatar-2.jpg",
+                "name": "Isabella Christensen",
+                "desc": "Lorem Ipsum is simply…",
+                "blink": "text-c-green",
+                "data": "11 MAY 12:56",
+                "r_href": "#!",
+                "a_href": "#!"
+            },
+            {
+                "avatar": "assets/images/user/avatar-3.jpg",
+                "name": "Isabella Christensen",
+                "desc": "Lorem Ipsum is simply…",
+                "blink": "text-c-green",
+                "data": "11 MAY 12:56",
+                "r_href": "#!",
+                "a_href": "#!"
+            },
+            {
+                "avatar": "assets/images/user/avatar-1.jpg",
+                "name": "Isabella Christensen",
+                "desc": "Lorem Ipsum is simply…",
+                "blink": "text-c-green",
+                "data": "11 MAY 12:56",
+                "r_href": "#!",
+                "a_href": "#!"
+            },{
+                "avatar": "assets/images/user/avatar-2.jpg",
+                "name": "Isabella Christensen",
+                "desc": "Lorem Ipsum is simply…",
+                "blink": "text-c-green",
+                "data": "11 MAY 12:56",
+                "r_href": "#!",
+                "a_href": "#!"
+            }
+        ],
+    "social" : [
+            {
+                "icon": "fa-facebook-f",
+                "count": "12,281",
+                "procent": "+7.2%",
+                "param": "Total Likes",
+                "blname": "Target:",
+                "blcount": "35,098",
+                "brname": "Duration:",
+                "brcount": "3,539"
+    
+            },
+            {
+                "icon": "fa-twitter",
+                "count": "12,281",
+                "procent": "+7.2%",
+                "param": "Total Likes",
+                "blname": "Target:",
+                "blcount": "35,098",
+                "brname": "Duration:",
+                "brcount": "3,539"
+            },
+            {
+                "icon": "fa-google-plus-g",
+                "count": "12,281",
+                "procent": "+7.2%",
+                "param": "Total Likes",
+                "blname": "Target:",
+                "blcount": "35,098",
+                "brname": "Duration:",
+                "brcount": "3,539"
+            }
+        ],
+    "tables" : ["myChat", "LikeChat", "WorkChat"],
+    
+    "raiting" : [890,567,156,44,14]
+}

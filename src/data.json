@@ -1,0 +1,67 @@
+{
+    "title": {
+        "name": "СТК Прогресс",
+        "img": "/img/.png",
+        "url": "/"
+    },
+    "menu": [
+        {
+            "name": "Dashboard",
+            "url": "/dashboard",
+            "icon": "feather icon-home"
+        },
+        {
+            "name": "Components",
+            "url": "#",
+            "icon": "feather icon-box",
+            "dropmenu": [
+                {"url": "bc_button.html", "name": "Button"},
+                {"url": "bc_badges.html", "name": "Badges"},
+                {"url": "bc_breadcrumb-pagination.html", "name": "Breadcrumb & paggination"},
+                {"url": "bc_collapse.html", "name": "Collapse"},
+                {"url": "bc_tabs.html", "name": "Tabs & pills"},
+                {"url": "bc_typography.html", "name": "Typography"},
+                {"url": "icon-feather.html", "name": "Feather"}
+            ]
+        },
+        {
+            "name": "Form elements",
+            "url": "/form",
+            "icon": "feather icon-file-text"
+        },
+        {
+            "name": "Table",
+            "url": "/tables",
+            "icon": "feather icon-server"
+        },
+        {
+            "name": "Chart",
+            "url": "/chart",
+            "icon": "feather icon-pie-chart"
+        },
+        {
+            "name": "Task",
+            "url": "/tasks",
+            "icon": "feather icon-pie-chart"
+        },
+        {
+            "name": "Maps",
+            "url": "/maps",
+            "icon": "feather icon-map"
+        },
+        {
+            "name": "Authentication",
+            "url": "#",
+            "icon": "feather icon-box",
+            "dropmenu": [
+                {"url": "/login", "name": "Sign In"},
+                {"url": "/singup", "name": "Sign Up"}
+            ]
+        },
+        {
+            "name": "Sample page",
+            "url": "/sample",
+            "icon": "feather icon-sidebar"
+        }
+    ]
+}

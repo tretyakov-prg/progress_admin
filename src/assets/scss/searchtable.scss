@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+.d-flex-my{
+		margin: 10px;
+		display: flex;
+		input{
+			margin-right: 5px;
+		}
+		bottom {
+			margin: 0px;
+			margin-left: 5px;
+		}
+}
+.search-box {
+    margin: 10px;
+	font-size: $font-size;
+	border: solid $frame-thickness $frame-color;
+	display: inline-block;
+	position: relative;
+	border-radius: $size;
+	input[type="text"] {
+		font-family: inherit;
+		font-weight: bold;
+		width: $size;
+		height: $size;
+		padding: $open-padding;
+		border: none;
+		box-sizing: border-box;
+		border-radius: $size;
+		transition:
+			width $open-trans-time cubic-bezier(0.68, -0.55, 0.27, 1.55) $close-trans-time;
+		&:focus {
+			outline: none;
+		}
+		&:focus, &:not(:placeholder-shown) {
+			width: $open-width;
+			transition: width $open-trans-time cubic-bezier(0.68, -0.55, 0.27, 1.55);
+			+ button[type="reset"] {
+				transform: rotate(-45deg) translateY(0);
+				transition:
+					transform $close-trans-time ease-out $open-trans-time;
+			}
+			+ button[type="reset"]:after {
+				opacity: 1;
+				transition:
+					top $close-trans-time ease-out ($open-trans-time + $close-trans-time),
+					right $close-trans-time ease-out ($open-trans-time + $close-trans-time),
+					opacity $close-trans-time ease ($open-trans-time + $close-trans-time);
+			}
+		}
+	}
+	button[type="reset"] {
+		background-color: transparent;
+		width: $handle-height;
+		height: $handle-height;
+		border: 0;
+		padding: 0;
+		outline: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: calc($size / 2) - calc($handle-height / 2);
+		right: calc($size / 2) - calc($handle-height / 2);
+		transform: rotate(-45deg) translateY($size - $frame-thickness);
+		transition:
+			transform $close-trans-time ease-out $close-trans-time;
+		&:before, &:after {
+			content: "";
+			background-color: $frame-color;
+			width: $frame-thickness;
+			height: $handle-height;
+			position: absolute;
+		}
+		&:after {
+			transform: rotate(90deg);
+			opacity: 0;
+			transition:
+				transform $close-trans-time ease-out,
+				opacity $close-trans-time ease-out;
+		}
+	}
+}
