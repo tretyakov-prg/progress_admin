@@ -12,7 +12,7 @@ const TaskCard = ({ item, index }) => {
         >
           <div className='taskinformation'>
             <p>{item.Task}</p>
-            <p>{item.Decription}</p>
+            <p>{item.Description}</p>
             <div className="secondary-details">
               <p>
                 <span>
@@ -23,6 +23,7 @@ const TaskCard = ({ item, index }) => {
                 </span>
               </p>
             </div>
+            <a href={`/tasks/${item.id}`}>Read more...</a>
           </div>
         </div>
       )}

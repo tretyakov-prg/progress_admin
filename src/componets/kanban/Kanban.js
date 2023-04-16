@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-
+import useKanban from '../../hooks/useKanban';
 import TaskCard from './TaskCard';
 import {MModal} from "../../libery";
 
 const Kanban = ({data}) => {
+  const {UpdateTaskItem} = useKanban();
+
   const [columns, setColumns] = useState(data);
 
   const onDragEnd = (result, columns, setColumns) => {
@@ -17,7 +19,7 @@ const Kanban = ({data}) => {
       const destItems = [...destColumn.items];
       const [removed] = sourceItems.splice(source.index, 1);
       destItems.splice(destination.index, 0, removed);
-      console.log({droppableId: result.draggableId, destination: result.destination.droppableId, source: result.source.droppableId, columns: columns});
+      UpdateTaskItem(result.draggableId, result.destination.droppableId);
       setColumns({
         ...columns,
         [source.droppableId]: {
@@ -67,7 +69,7 @@ const Kanban = ({data}) => {
                         }
                         </div>
                         <div className='col'>
-                            <MModal _index={index} />
+                            <MModal _colum={columnId}/>
                         </div>
                     </div>
                     <div className='row scroler'>

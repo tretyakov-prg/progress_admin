@@ -1,4 +1,5 @@
 import React, {useState, useEffect } from "react";
+import AuthService from "../services/auth.service";
 import {NMDrop, NMItem, HBLeft, HBRight, NMDisButt} from "../libery";
 
 function AppNavBar (props) {
@@ -27,6 +28,10 @@ function AppNavBar (props) {
        })
       },[]);
 
+    const logOut = () => {
+        AuthService.logout();
+        window.location.reload();
+    };
     return (
     <>
         <nav className={isActive ? "pcoded-navbar" + (isMobile ? "": " mob-open") : "pcoded-navbar navbar-collapsed"}>
@@ -55,6 +60,15 @@ function AppNavBar (props) {
                                     }
                                 })}
                                 <NMDisButt url={'#'} icon={'icon-power'} name={'Disabled menu'} />
+                                <br></br>
+                                <li className="nav-item">
+                                    <a href={"#"} className="nav-link " onClick={logOut}>
+                                        <span className="pcoded-micon">
+                                            <i className={'icon-power'}></i>
+                                        </span>
+                                        <span className="pcoded-mtext">{'Logout'}</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>

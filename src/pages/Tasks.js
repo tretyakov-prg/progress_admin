@@ -1,15 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Kanban from '../componets/kanban/Kanban';
-//import { columnsFromBackend } from '../KanbanData';
 import useKanban from '../hooks/useKanban';
 
 const Tasks = () => {
-    const {kdata} = useKanban()
+    const {kdata, GetTasks} = useKanban();
+    useEffect(()=>{
+        GetTasks();  
+    },[])
+    
     return(
         <div className="row">
             <div className="col-xl-12">
                 <div className="kanban">
-                    <Kanban data={kdata}/>
+                    {kdata.length === 0 ? "sdfgsdfsdff" : <Kanban data={kdata}/>}
                 </div>
             </div>
         </div>
