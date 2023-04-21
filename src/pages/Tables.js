@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import tables from "../jul2021.json";
 import MTable from "../libery/MTable/MTable";
 import { Form, Button} from 'react-bootstrap';
 
 function Tables() {
-    
+    const ref = useRef(null);
+
     const [ datatable, setDatatable] = useState(tables.data);
     const [search, setSearch] = useState('');
 
@@ -42,9 +43,15 @@ function Tables() {
                             placeholder="Search in Table..."
                             className="me-2"
                             aria-label="Search"
+                            ref={ref}
                             onChange={handleSearch}
                             />
-                            <Button variant="primary">Clear</Button>
+                            <Button variant="primary"
+                            onClick={()=>{
+                                setSearch('');
+                                ref.current.value = "";
+                            }}
+                            >Clear</Button>
                         </Form>
                         <div className="table-responsive">
                             <MTable data={datatable} rowsPerPage={15} title={tname} limitcol={8}/>

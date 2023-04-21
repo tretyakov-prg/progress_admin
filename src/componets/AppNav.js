@@ -62,9 +62,9 @@ function AppNavBar (props) {
                                 <NMDisButt url={'#'} icon={'icon-power'} name={'Disabled menu'} />
                                 <br></br>
                                 <li className="nav-item">
-                                    <a href={"#"} className="nav-link " onClick={logOut}>
+                                    <a href={' '} className="nav-link " onClick={logOut}>
                                         <span className="pcoded-micon">
-                                            <i className={'icon-power'}></i>
+                                            <i className={'feather icon-power'}></i>
                                         </span>
                                         <span className="pcoded-mtext">{'Logout'}</span>
                                     </a>

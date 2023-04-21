@@ -10,7 +10,7 @@ class AuthService {
         password
       })
       .then(response => {
-        console.log(response.data.accessToken)
+        //console.log(response.data.accessToken)
         if (response.data.accessToken) {
           localStorage.setItem("user", JSON.stringify(response.data.accessToken));
           window.location.reload();
@@ -25,7 +25,7 @@ class AuthService {
   }
 
   register(username, email, password) {
-    return axios.post(API_URL + "signup", {
+    return axios.post(API_URL + "/reg", {
       username,
       email,
       password

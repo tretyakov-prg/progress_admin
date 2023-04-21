@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import AuthService from "../services/auth.service";
 
 const required = value => {
@@ -12,6 +13,8 @@ const required = value => {
 };
 
 function Login() {
+    const navigate = useNavigate();
+
     const [inRemeber, setRemember] = useState(true);
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -21,7 +24,7 @@ function Login() {
     }
     const submit = () => {
         AuthService.login(email, password)
-        .then(rez => window.location.reload())
+        .then((rez) => navigate('/dashboard', { replace: true }))
         .catch(err => console.log(err))
     }
     
@@ -44,8 +47,8 @@ function Login() {
                             <input 
                                 type="email" 
                                 className="form-control" 
-                                placeholder="Email" 
-                                value={email}
+                                placeholder="Email"
+                                defaultValue={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 validations={[required]}
                             />
@@ -55,7 +58,7 @@ function Login() {
                                 type="password" 
                                 className="form-control" 
                                 placeholder="password"
-                                value={password}
+                                defaultValue={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 validations={[required]}
                             />

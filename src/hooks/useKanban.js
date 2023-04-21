@@ -24,8 +24,8 @@ const useKanban = () => {
     const InsertTaskItem = (data) => {
         axios
         .post("/task", data)
-        .then(response => console.log(response.data)) //response.data
-        .catch(error => console.log(error));
+        //.then(response => console.log(response.data)) //response.data
+        //.catch(error => console.log(error));
     }
     const UpdateTaskItem = (_guid, _status) => {
         axios
@@ -33,8 +33,8 @@ const useKanban = () => {
             guid: _guid,
             status: _status
         })
-        .then(response => console.log(response.data))
-        .catch(error => console.log(error));
+        //.then(response => console.log(response.data))
+        //.catch(error => console.log(error));
     }
     const GetStatus = () =>{
         axios
@@ -42,13 +42,13 @@ const useKanban = () => {
         .then(response => {
             setStatus(response.data.data);
         })
-        .catch(error => console.log(error));
+        //.catch(error => console.log(error));
     }
     const DelTasksId = (data) =>{
         axios
         .delete(`/task/${data.id}`)
-        .then(response => {console.log("Delete: " + data)})
-        .catch(error => console.log(error));
+        //.then(response => {console.log("Delete: " + data)})
+        //.catch(error => console.log(error));
     }
     return {kdata, data, status, setKdata, GetStatus, GetTasks, GetTasksId, InsertTaskItem, UpdateTaskItem, DelTasksId};
 }

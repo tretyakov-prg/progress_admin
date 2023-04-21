@@ -12,7 +12,6 @@ const TableFooter = ({ range, setPage, page, slice }) => {
   const PagButton = ({numPag, rangePage}) => {
     return <button className={`button ${numPag === rangePage ? "activeButton" : "inactiveButton"}`} onClick={() => setPage(rangePage)} >{rangePage}</button>
   }
-  console.log(range.length);
   return (
     <div className="tableFooter">
       { !range.length ? "Нет данных" : <PagButton numPag = {page} rangePage = {range[0]} />}
