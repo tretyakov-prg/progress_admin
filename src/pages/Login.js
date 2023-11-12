@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import AuthService from "../services/auth.service";
 
 const required = value => {
@@ -18,14 +18,19 @@ function Login() {
     const [inRemeber, setRemember] = useState(true);
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
+    const [message, setMessage] = useState("");
 
     const butCheck = () => {
         setRemember(!inRemeber);
     }
     const submit = () => {
         AuthService.login(email, password)
-        .then((rez) => navigate('/dashboard', { replace: true }))
-        .catch(err => console.log(err))
+        .then(() => {
+            navigate('dashboard', { replace: true })
+        })
+        .catch(err => {
+            setMessage(err.code);
+        })
     }
     
     return ( 
@@ -69,6 +74,7 @@ function Login() {
                                 <label htmlFor="checkbox-fill-a1" className="cr"> Save Details</label>
                             </div>
                         </div>
+                        <p style={{color: "red"}}>{message}</p>
                         <button className="btn btn-primary shadow-2 mb-4" onClick={submit}>Login</button>
                         <p className="mb-2 text-muted">Forgot password? <a href="/">Reset</a></p>
                         <p className="mb-0 text-muted">Don’t have an account? <a href="/singup">Signup</a></p>

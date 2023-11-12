@@ -1,0 +1,171 @@
+.radio {
+	padding: 10px 0;
+	min-height: auto;
+	position: relative;
+	margin-right: 5px;
+	input[type=radio] {
+		margin: 0;
+		display: none;
+		width: 22px;
+		+ {
+			.cr {
+				padding-left: 0;
+				&:after {
+					content: "";
+					display: inline-block;
+					margin-right: 10px;
+					border-radius: 50%;
+					vertical-align: bottom;
+					background: #fff;
+					color: $color_23;
+					cursor: pointer;
+					-webkit-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
+					width: 12px;
+					height: 12px;
+					position: absolute;
+					top: 13px;
+					left: 5px;
+				}
+				&:before {
+					content: "";
+					display: inline-block;
+					margin-right: 10px;
+					border-radius: 50%;
+					vertical-align: bottom;
+					background: #fff;
+					color: $color_23;
+					cursor: pointer;
+					-webkit-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
+					width: 22px;
+					height: 22px;
+					border: 2px solid #e9eaec;
+				}
+			}
+		}
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						border-color: $border-color_8;
+					}
+					&:after {
+						background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+					}
+				}
+			}
+		}
+		&:disabled {
+			+ {
+				.cr {
+					opacity: 0.5;
+					cursor: not-allowed;
+					&:after {
+						cursor: not-allowed;
+					}
+					&:before {
+						cursor: not-allowed;
+					}
+				}
+			}
+		}
+	}
+	.cr {
+		cursor: pointer;
+	}
+}
+.radio.radio-fill {
+	input[type=radio] {
+		+ {
+			.cr {
+				&:after {
+					width: 18px;
+					height: 18px;
+					top: 10px;
+					left: 2px;
+				}
+			}
+		}
+	}
+}
+.radio.radio-primary {
+	input[type=radio] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						border-color: $border-color_2;
+					}
+					&:after {
+						background: #04a9f5;
+					}
+				}
+			}
+		}
+	}
+}
+.radio.radio-danger {
+	input[type=radio] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						border-color: $border-color_9;
+					}
+					&:after {
+						background: #f44236;
+					}
+				}
+			}
+		}
+	}
+}
+.radio.radio-success {
+	input[type=radio] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						border-color: $border-color_10;
+					}
+					&:after {
+						background: #1de9b6;
+					}
+				}
+			}
+		}
+	}
+}
+.radio.radio-warning {
+	input[type=radio] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						border-color: $border-color_11;
+					}
+					&:after {
+						background: #f4c22b;
+					}
+				}
+			}
+		}
+	}
+}
+.radio.radio-info {
+	input[type=radio] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						border-color: $border-color_12;
+					}
+					&:after {
+						background: #3ebfea;
+					}
+				}
+			}
+		}
+	}
+}

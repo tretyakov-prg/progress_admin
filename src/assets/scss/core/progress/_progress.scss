@@ -1,0 +1,41 @@
+.progress {
+	height: 12px;
+	font-size: 10px;
+	background-color: $background-color_53;
+	border-radius: 0;
+	overflow: visible;
+}
+.progress-bar {
+	background-color: $background-color_2;
+	-webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.progress-bar.progress-c-blue {
+	background: #04a9f5;
+}
+.progress-bar.progress-c-theme {
+	background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+	background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+	background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+	background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+	background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+}
+.progress-bar.progress-c-theme2 {
+	background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+	background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+	background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+	background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+	background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+}
+.progress-bar.progress-c-red {
+	background: #f44236;
+}
+.progress-bar.progress-c-green {
+	background: #1de9b6;
+}
+.progress-bar.progress-c-yellow {
+	background: #f4c22b;
+}
+.progress-bar.progress-c-purple {
+	background: #a389d4;
+}

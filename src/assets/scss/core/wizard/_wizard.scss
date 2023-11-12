@@ -1,0 +1,65 @@
+.wizard-container {
+	z-index: 3;
+	.wizard-navigation {
+		position: relative;
+	}
+}
+.wizard-card {
+	.moving-tab {
+		position: absolute;
+		text-align: center;
+		padding: 16px 12px;
+		font-size: 14px;
+		text-transform: uppercase;
+		-webkit-font-smoothing: subpixel-antialiased;
+		top: -6px;
+		left: 0;
+		border-radius: 4px;
+		color: $color_67;
+		cursor: pointer;
+		font-weight: 500;
+	}
+	.wizard-footer {
+		.checkbox {
+			margin-top: 16px;
+		}
+	}
+	.disabled {
+		display: none;
+	}
+}
+.wizard-card[data-color="wizard-primary"] {
+	.moving-tab {
+		background-color: $background-color_2;
+		-webkit-box-shadow: 0 16px 26px -10px rgba(4, 169, 245, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(4, 169, 245, 0.2);
+		box-shadow: 0 16px 26px -10px rgba(4, 169, 245, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(4, 169, 245, 0.2);
+	}
+}
+.wizard-card[data-color="wizard-danger"] {
+	.moving-tab {
+		background-color: $background-color_45;
+		-webkit-box-shadow: 0 16px 26px -10px rgba(244, 66, 54, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 66, 54, 0.2);
+		box-shadow: 0 16px 26px -10px rgba(244, 66, 54, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 66, 54, 0.2);
+	}
+}
+.wizard-card[data-color="wizard-success"] {
+	.moving-tab {
+		background-color: $background-color_36;
+		-webkit-box-shadow: 0 16px 26px -10px rgba(29, 233, 182, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(29, 233, 182, 0.2);
+		box-shadow: 0 16px 26px -10px rgba(29, 233, 182, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(29, 233, 182, 0.2);
+	}
+}
+.wizard-card[data-color="wizard-warning"] {
+	.moving-tab {
+		background-color: $background-color_42;
+		-webkit-box-shadow: 0 16px 26px -10px rgba(244, 194, 43, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 194, 43, 0.2);
+		box-shadow: 0 16px 26px -10px rgba(244, 194, 43, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 194, 43, 0.2);
+	}
+}
+.wizard-card[data-color="wizard-info"] {
+	.moving-tab {
+		background-color: $background-color_39;
+		-webkit-box-shadow: 0 16px 26px -10px rgba(62, 191, 234, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(62, 191, 234, 0.2);
+		box-shadow: 0 16px 26px -10px rgba(62, 191, 234, 0.56), 0 4px 25px 0 rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(62, 191, 234, 0.2);
+	}
+}

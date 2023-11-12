@@ -45,6 +45,15 @@
             "icon": "feather icon-pie-chart"
         },
         {
+            "name": "Partners",
+            "url": "#",
+            "icon": "feather icon-box",
+            "dropmenu": [
+                {"url": "/partners/customer", "name": "Сustomer"},
+                {"url": "/partners/provider", "name": "Provider"}
+            ]
+        },
+        {
             "name": "Maps",
             "url": "/maps",
             "icon": "feather icon-map"

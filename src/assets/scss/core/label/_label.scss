@@ -1,0 +1,27 @@
+.label {
+	padding: 4px 10px;
+	min-height: auto;
+	position: relative;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.label.label-primary {
+	background: #04a9f5;
+	color: $color_43;
+}
+.label.label-danger {
+	background: #f44236;
+	color: $color_43;
+}
+.label.label-success {
+	background: #1de9b6;
+	color: $color_43;
+}
+.label.label-warning {
+	background: #f4c22b;
+	color: $color_43;
+}
+.label.label-info {
+	background: #3ebfea;
+	color: $color_43;
+}

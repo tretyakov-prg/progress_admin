@@ -1,6 +1,10 @@
 import { useState } from "react";
 import axios from 'axios';
 
+const API_URL = "task";
+const Port = 5000;
+const baseurl = 'http://' + window.location.hostname + ':' + Port + '/' + API_URL;
+
 const useKanban = () => {
     const [kdata, setKdata]  = useState([]);
     
@@ -9,13 +13,13 @@ const useKanban = () => {
     const [status, setStatus] = useState([]);
 
     const GetTasks = () =>{
-        axios.get(`task`)
+        axios.get(baseurl)
         .then(res => setKdata(res.data.data))
         .catch(error => console.log(error));
     }
     const GetTasksId = (data) =>{
         axios
-        .get(`/task/${data.id}`)
+        .get(baseurl + '/' + data.id)
         .then(response => {
             setData(response.data.data[0]);
         })
@@ -23,13 +27,13 @@ const useKanban = () => {
     }
     const InsertTaskItem = (data) => {
         axios
-        .post("/task", data)
+        .post(baseurl, data)
         //.then(response => console.log(response.data)) //response.data
         //.catch(error => console.log(error));
     }
     const UpdateTaskItem = (_guid, _status) => {
         axios
-        .put("/task", {
+        .put(baseurl, {
             guid: _guid,
             status: _status
         })
@@ -38,7 +42,7 @@ const useKanban = () => {
     }
     const GetStatus = () =>{
         axios
-        .get(`/task/status`)
+        .get(baseurl + '/status')
         .then(response => {
             setStatus(response.data.data);
         })
@@ -46,7 +50,7 @@ const useKanban = () => {
     }
     const DelTasksId = (data) =>{
         axios
-        .delete(`/task/${data.id}`)
+        .delete(baseurl + '/' + data.id)
         //.then(response => {console.log("Delete: " + data)})
         //.catch(error => console.log(error));
     }

@@ -1,0 +1,267 @@
+.checkbox {
+	padding: 10px 0;
+	min-height: auto;
+	position: relative;
+	margin-right: 5px;
+	input[type=checkbox] {
+		margin: 0;
+		display: none;
+		width: 22px;
+		+ {
+			.cr {
+				padding-left: 0;
+				&:before {
+					content: "\e83f";
+					width: 22px;
+					height: 22px;
+					display: inline-block;
+					margin-right: 10px;
+					border: 2px solid #e9eaec;
+					border-radius: 3px;
+					font-size: 15px;
+					font-family: $font-family_3;
+					font-weight: 400;
+					line-height: 19px;
+					vertical-align: bottom;
+					text-align: center;
+					background: #ffffff;
+					color: $color_23;
+					cursor: pointer;
+					-webkit-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
+				}
+			}
+		}
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: #1dd5d2;
+						border-color: $border-color_8;
+						color: $color_43;
+					}
+				}
+			}
+		}
+		&:disabled {
+			+ {
+				.cr {
+					opacity: 0.5;
+					&:before {
+						cursor: not-allowed;
+					}
+				}
+			}
+		}
+	}
+	input[type=checkbox].disabled {
+		+ {
+			.cr {
+				opacity: 0.5;
+				&:before {
+					cursor: not-allowed;
+				}
+			}
+		}
+	}
+	.cr {
+		cursor: pointer;
+	}
+}
+.checkbox.checkbox-fill {
+	input[type=checkbox] {
+		+ {
+			.cr {
+				&:after {
+					content: "";
+					width: 22.5px;
+					height: 22.5px;
+					display: inline-block;
+					margin-right: 10px;
+					border: 2px solid #e9eaec;
+					border-radius: 2px;
+					vertical-align: bottom;
+					text-align: center;
+					background: transparent;
+					cursor: pointer;
+					-webkit-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
+					position: absolute;
+					top: 8.5px;
+					left: 3px;
+				}
+				&:before {
+					opacity: 0;
+					content: "\e840";
+					font-size: 27px;
+					background: transparent;
+				}
+			}
+		}
+		&:checked {
+			+ {
+				.cr {
+					&:after {
+						opacity: 0;
+					}
+					&:before {
+						opacity: 1;
+						background: transparent;
+						color: $color_44;
+						border-color: $border-color_1;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-primary {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: #04a9f5;
+						border-color: $border-color_2;
+						color: $color_43;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-fill.checkbox-primary {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: transparent;
+						color: $color_4;
+						border-color: $border-color_1;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-danger {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: #f44236;
+						border-color: $border-color_9;
+						color: $color_43;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-fill.checkbox-danger {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: transparent;
+						color: $color_16;
+						border-color: $border-color_1;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-success {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: #1de9b6;
+						border-color: $border-color_10;
+						color: $color_43;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-fill.checkbox-success {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: transparent;
+						color: $color_17;
+						border-color: $border-color_1;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-warning {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: #f4c22b;
+						border-color: $border-color_11;
+						color: $color_43;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-fill.checkbox-warning {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: transparent;
+						color: $color_18;
+						border-color: $border-color_1;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-info {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: #3ebfea;
+						border-color: $border-color_12;
+						color: $color_43;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.checkbox-fill.checkbox-info {
+	input[type=checkbox] {
+		&:checked {
+			+ {
+				.cr {
+					&:before {
+						background: transparent;
+						color: $color_34;
+						border-color: $border-color_1;
+					}
+				}
+			}
+		}
+	}
+}

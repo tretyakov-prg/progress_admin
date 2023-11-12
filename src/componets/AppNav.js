@@ -1,40 +1,59 @@
-import React, {useState, useEffect } from "react";
+import React, { useState } from "react";
 import AuthService from "../services/auth.service";
 import {NMDrop, NMItem, HBLeft, HBRight, NMDisButt} from "../libery";
+import { useLocalStorage } from '../hooks/useLocalSorage';
 
 function AppNavBar (props) {
     
     let menu = props.data;
 
-    const [isMobile, setMobile] = useState(true);
-    const [isActive, setActive] = useState(true);
+    const [value, setValue] = useLocalStorage('panel', false);
+    const [mobile, setMobile] = useState(false);
+    const [mvalue, setMValue] = useState(false);
 
     const toggleClass = () => {
-        setActive(!isActive);
+        setValue(!value);
+    }; 
+    const mtoggleClass = () => {
+        setMValue(!mvalue);
+        setMobile(!mobile);  
     };
-
-    const onClickOutsidemenu = () => {
-        setMobile(true);
-        document.removeEventListener("click", onClickOutsidemenu)
+    const NavCollapsed = (collap) => {
+        if(collap){ return "pcoded-navbar navbar-collapsed";}
+        else { return "pcoded-navbar";}
     }
-
-    useEffect(() => {
-        window.addEventListener('resize', () => {
-            const myWidth  = window.innerWidth;
-            if( myWidth < 980)
-            {
-                setActive(true);
-            }
-       })
-      },[]);
-
+    const MobColl = (mob) => {
+        if(mob){ return "";}
+        else{return "mob-open";}
+    }
     const logOut = () => {
         AuthService.logout();
         window.location.reload();
     };
+
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+
+    function doSomething(scrollPos) {
+    // Do something with the scroll position
+    }
+
+    document.addEventListener("scroll", (event) => {
+    lastKnownScrollPosition = window.scrollY;
+
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+        doSomething(lastKnownScrollPosition);
+        ticking = false;
+        });
+
+        ticking = true;
+    }
+    });
     return (
     <>
-        <nav className={isActive ? "pcoded-navbar" + (isMobile ? "": " mob-open") : "pcoded-navbar navbar-collapsed"}>
+        {/*=============== full version =================*/}
+        <nav className={NavCollapsed(value) + " " + MobColl(!mobile)}>
             <div className="navbar-wrapper">
                 <div className="navbar-brand header-logo">
                 <a href={props.title.url} className="b-brand">
@@ -43,7 +62,7 @@ function AppNavBar (props) {
                     </div>
                     <span className="b-title">{props.title.name}</span>
                 </a>
-                <a className={isActive ? "mobile-menu" : "mobile-menu on"} id="mobile-collapse" href='#!' onClick={toggleClass}><span></span></a>
+                <a className={!value ? "mobile-menu" : "mobile-menu on"} href='#!' onClick={toggleClass}><span></span></a>
                 </div>
                 <div className="slimScrollDiv">
                     <div className="navbar-content scroll-div">
@@ -77,9 +96,10 @@ function AppNavBar (props) {
                 </div>
             </div>
         </nav>
+        {/*==================== mobile version =================*/}
         <header  className="navbar pcoded-header navbar-expand-lg navbar-light">
             <div  className="m-header">
-                <a  className={isMobile ? "mobile-menu" : "mobile-menu on"} id="mobile-collapse1" href='#!' onClick={()=>setMobile(!isMobile)} onMouseLeave={() => { document.addEventListener("click", onClickOutsidemenu)}}><span></span></a>
+                <a  className={!mvalue ? "mobile-menu" : "mobile-menu on"} href='#!' onClick={mtoggleClass}><span></span></a>
                 <a href={props.title.url} className="b-brand">
                     <div  className="b-bg">
                         <i  className="feather icon-trending-up"></i>

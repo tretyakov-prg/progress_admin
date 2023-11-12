@@ -1,0 +1,238 @@
+.toolbar-primary {
+	.tool-item {
+		background: #04a9f5;
+		&:hover {
+			background: #0386c3;
+		}
+	}
+	.tool-item.selected {
+		background: #0386c3;
+	}
+}
+.toolbar-primary.tool-top {
+	.arrow {
+		border-color: $border-color_41;
+	}
+}
+.toolbar-primary.tool-bottom {
+	.arrow {
+		border-color: $border-color_42;
+	}
+}
+.toolbar-primary.tool-left {
+	.arrow {
+		border-color: $border-color_43;
+	}
+}
+.toolbar-primary.tool-right {
+	.arrow {
+		border-color: $border-color_44;
+	}
+}
+.btn-toolbar-primary.pressed {
+	background-color: $background-color_2;
+}
+.toolbar-warning {
+	.tool-item {
+		background: #f4c22b;
+		&:hover {
+			background: #e0ab0c;
+		}
+	}
+	.tool-item.selected {
+		background: #e0ab0c;
+	}
+}
+.toolbar-warning.tool-top {
+	.arrow {
+		border-color: $border-color_45;
+	}
+}
+.toolbar-warning.tool-bottom {
+	.arrow {
+		border-color: $border-color_46;
+	}
+}
+.toolbar-warning.tool-left {
+	.arrow {
+		border-color: $border-color_47;
+	}
+}
+.toolbar-warning.tool-right {
+	.arrow {
+		border-color: $border-color_48;
+	}
+}
+.btn-toolbar-warning.pressed {
+	background-color: $background-color_42;
+}
+.toolbar-light {
+	.tool-item {
+		background: #d6d6d6;
+		&:hover {
+			background: #bdbdbd;
+		}
+	}
+	.tool-item.selected {
+		background: #bdbdbd;
+	}
+}
+.toolbar-light.tool-top {
+	.arrow {
+		border-color: $border-color_49;
+	}
+}
+.toolbar-light.tool-bottom {
+	.arrow {
+		border-color: $border-color_50;
+	}
+}
+.toolbar-light.tool-left {
+	.arrow {
+		border-color: $border-color_51;
+	}
+}
+.toolbar-light.tool-right {
+	.arrow {
+		border-color: $border-color_52;
+	}
+}
+.btn-toolbar-light.pressed {
+	background-color: $background-color_54;
+}
+.toolbar-danger {
+	.tool-item {
+		background: #f44236;
+		&:hover {
+			background: #ea1b0d;
+		}
+	}
+	.tool-item.selected {
+		background: #ea1b0d;
+	}
+}
+.toolbar-danger.tool-top {
+	.arrow {
+		border-color: $border-color_53;
+	}
+}
+.toolbar-danger.tool-bottom {
+	.arrow {
+		border-color: $border-color_54;
+	}
+}
+.toolbar-danger.tool-left {
+	.arrow {
+		border-color: $border-color_55;
+	}
+}
+.toolbar-danger.tool-right {
+	.arrow {
+		border-color: $border-color_56;
+	}
+}
+.btn-toolbar-danger.pressed {
+	background-color: $background-color_45;
+}
+.toolbar-success {
+	.tool-item {
+		background: #1de9b6;
+		&:hover {
+			background: #13c095;
+		}
+	}
+	.tool-item.selected {
+		background: #13c095;
+	}
+}
+.toolbar-success.tool-top {
+	.arrow {
+		border-color: $border-color_57;
+	}
+}
+.toolbar-success.tool-bottom {
+	.arrow {
+		border-color: $border-color_58;
+	}
+}
+.toolbar-success.tool-left {
+	.arrow {
+		border-color: $border-color_59;
+	}
+}
+.toolbar-success.tool-right {
+	.arrow {
+		border-color: $border-color_60;
+	}
+}
+.btn-toolbar-success.pressed {
+	background-color: $background-color_36;
+}
+.toolbar-dark {
+	.tool-item {
+		background: #37474f;
+		&:hover {
+			background: #222c31;
+		}
+	}
+	.tool-item.selected {
+		background: #222c31;
+	}
+}
+.toolbar-dark.tool-top {
+	.arrow {
+		border-color: $border-color_61;
+	}
+}
+.toolbar-dark.tool-bottom {
+	.arrow {
+		border-color: $border-color_62;
+	}
+}
+.toolbar-dark.tool-left {
+	.arrow {
+		border-color: $border-color_63;
+	}
+}
+.toolbar-dark.tool-right {
+	.arrow {
+		border-color: $border-color_64;
+	}
+}
+.btn-toolbar-dark.pressed {
+	background-color: $background-color_28;
+}
+.toolbar-info {
+	.tool-item {
+		background: #3ebfea;
+		&:hover {
+			background: #18acdd;
+		}
+	}
+	.tool-item.selected {
+		background: #18acdd;
+	}
+}
+.toolbar-info.tool-top {
+	.arrow {
+		border-color: $border-color_65;
+	}
+}
+.toolbar-info.tool-bottom {
+	.arrow {
+		border-color: $border-color_66;
+	}
+}
+.toolbar-info.tool-left {
+	.arrow {
+		border-color: $border-color_67;
+	}
+}
+.toolbar-info.tool-right {
+	.arrow {
+		border-color: $border-color_68;
+	}
+}
+.btn-toolbar-info.pressed {
+	background-color: $background-color_39;
+}

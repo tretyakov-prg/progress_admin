@@ -1,0 +1,171 @@
+.table {
+	td {
+		border-top: 1px solid #eaeaea;
+		white-space: nowrap;
+		padding: 1.05rem 0.75rem;
+	}
+	th {
+		border-top: 1px solid #eaeaea;
+		white-space: nowrap;
+		padding: 1.05rem 0.75rem;
+	}
+	thead {
+		th {
+			border-bottom: 1px solid #eaeaea;
+		}
+	}
+	tbody {
+		+ {
+			tbody {
+				border-top: 2px solid #eaeaea;
+			}
+		}
+	}
+	.thead-dark {
+		th {
+			color: $color_5;
+			background-color: $background-color_28;
+			border-color: $border-color_13;
+		}
+	}
+}
+.table-bordered {
+	border: 1px solid #eaeaea;
+	td {
+		border: 1px solid #eaeaea;
+	}
+	th {
+		border: 1px solid #eaeaea;
+	}
+}
+.table-striped {
+	tbody {
+		tr {
+			&:nth-of-type(2n+1) {
+				background-color: $background-color_27;
+			}
+		}
+	}
+}
+.table-hover {
+	tbody {
+		tr {
+			&:hover {
+				background-color: $background-color_27;
+			}
+		}
+	}
+}
+.table-dark {
+	color: $color_5;
+	background-color: $background-color_28;
+	td {
+		border-color: $border-color_13;
+	}
+	th {
+		border-color: $border-color_13;
+	}
+	thead {
+		th {
+			border-color: $border-color_13;
+		}
+	}
+}
+.table-dark.table-striped {
+	tbody {
+		tr {
+			&:nth-of-type(odd) {
+				background-color: $background-color_29;
+			}
+		}
+	}
+}
+.table-dark.table-hover {
+	tbody {
+		tr {
+			&:hover {
+				background-color: $background-color_30;
+			}
+		}
+	}
+}
+table.dataTable.fixedHeader-floating {
+	top: 0 !important;
+}
+.footable {
+	.pagination {
+		>.active {
+			>a {
+				background-color: $background-color_2;
+				border-color: $border-color_2;
+				&:focus {
+					background-color: $background-color_2;
+					border-color: $border-color_2;
+				}
+				&:hover {
+					background-color: $background-color_2;
+					border-color: $border-color_2;
+				}
+			}
+			>span {
+				background-color: $background-color_2;
+				border-color: $border-color_2;
+				&:focus {
+					background-color: $background-color_2;
+					border-color: $border-color_2;
+				}
+				&:hover {
+					background-color: $background-color_2;
+					border-color: $border-color_2;
+				}
+			}
+		}
+		>li {
+			>a {
+				color: $color_21;
+			}
+			>span {
+				color: $color_21;
+			}
+		}
+	}
+}
+.footable-details.table {
+	margin-bottom: 0;
+}
+.footable.table {
+	margin-bottom: 0;
+}
+table.footable {
+	>tfoot {
+		>tr.footable-paging {
+			>td {
+				>span.label {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+table.footable-paging-center {
+	>tfoot {
+		>tr.footable-paging {
+			>td {
+				padding-bottom: 0;
+			}
+		}
+	}
+}
+.table-columned {
+	>tbody {
+		>tr {
+			>td {
+				border: 0;
+				border-left: 1px solid #eaeaea;
+			}
+			>th {
+				border: 0;
+			}
+		}
+	}
+}

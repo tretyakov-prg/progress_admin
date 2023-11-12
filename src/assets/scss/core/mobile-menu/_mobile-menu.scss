@@ -1,0 +1,75 @@
+.mobile-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 37px;
+	height: 70px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0 10px;
+	z-index: 1;
+	span {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 2.8px;
+		background-color: $background-color_9;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		border-radius: 2px;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			height: 2.8px;
+			background-color: $background-color_9;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			border-radius: 2px;
+			top: 5px;
+			width: 70%;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			height: 2.8px;
+			background-color: $background-color_9;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			border-radius: 2px;
+			top: -5px;
+			width: 40%;
+		}
+	}
+}
+.mobile-menu.on {
+	span {
+		background-color: $background-color_1;
+		&:after {
+			height: 2px;
+			width: 100%;
+			-webkit-transform: rotate(-45deg) translate(3px, -3px);
+			transform: rotate(-45deg) translate(3px, -3px);
+		}
+		&:before {
+			height: 2px;
+			width: 100%;
+			-webkit-transform: rotate(45deg) translate(4px, 4px);
+			transform: rotate(45deg) translate(4px, 4px);
+		}
+	}
+}
